@@ -24,7 +24,8 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
     try {
   if (isRegister) {
-    const strongPassword = /^(?=.*[A-Za-z])(?=.*\d).{8,}$/;
+const strongPassword =
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/;
 
 if (!strongPassword.test(password)) {
   setMessage("كلمة المرور يجب أن تكون 8 أحرف على الأقل وتحتوي على حرف إنجليزي ورقم");
@@ -175,12 +176,12 @@ setMessage(
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            minLength={6}
+            minLength={8}
             className="w-full border rounded-xl px-4 py-3"
           />
           {isRegister && (
   <p className="text-xs text-gray-500">
-    كلمة المرور يجب أن تكون 8 أحرف على الأقل وتحتوي على حرف إنجليزي ورقم.
+يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل، وحرف كبير، وحرف صغير، ورقم، ورمز خاص.
   </p>
 )}
 <button
