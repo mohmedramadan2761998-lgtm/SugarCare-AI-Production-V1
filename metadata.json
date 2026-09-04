@@ -1,0 +1,8 @@
+{
+  "name": "Remix SugarCare AI – Smart Diabetes Companion",
+  "description": "A modern smart diabetes companion app for daily blood glucose tracking, medication reminders, meal \u0026 activity logs, personalized AI health insights, and clinical reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
